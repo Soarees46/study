@@ -1,33 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 15:35:24 by calberto          #+#    #+#             */
-/*   Updated: 2026/05/19 17:56:31 by carlossoare      ###   ########.fr       */
+/*   Created: 2026/05/18 13:24:18 by carlossoare       #+#    #+#             */
+/*   Updated: 2026/05/19 18:11:52 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include "libft.h"
 
-int ft_isalnum(int c)
+void ft_bzero(void *s, size_t n)
 {
-    if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-        return (1);
-    return (0);
+    size_t i;
+    unsigned char *ptr;
+
+    ptr = (unsigned char *)s;
+    i = 0;
+    while (i < n)
+    {
+        ptr[i] = 0;
+        i++;
+    }
 }
 
 // #include <stdio.h>
-
-// int ft_isalnum(int c);
-
+// #include <unistd.h>
+//
 // int main(void)
 // {
-//     printf("%d\n", ft_isalnum('A'));
-//     printf("%d\n", ft_isalnum('9'));
-//     printf("%d\n", ft_isalnum('@'));
-
+//     char str[] = "HELLO WORLD";
+//
+//     printf("Antes: %s\n", str);
+//
+//     ft_bzero(str, 5);
+//
+//     printf("Depois: %s\n", str);
+//
 //     return 0;
 // }

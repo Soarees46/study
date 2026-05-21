@@ -1,33 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 15:35:24 by calberto          #+#    #+#             */
-/*   Updated: 2026/05/19 17:56:31 by carlossoare      ###   ########.fr       */
+/*   Created: 2026/04/30 15:20:33 by carlossoare       #+#    #+#             */
+/*   Updated: 2026/05/19 17:54:15 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+void *ft_memset(void *b, int c, size_t len)
 {
-    if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-        return (1);
-    return (0);
+    unsigned char *dest;
+    size_t i;
+
+    dest = (unsigned char *)b;
+    i = 0;
+    while (i < len)
+    {
+        dest[i] = (unsigned char)c;
+        i++;
+    }
+    return (b);
 }
 
 // #include <stdio.h>
-
-// int ft_isalnum(int c);
+// #include <string.h>
 
 // int main(void)
 // {
-//     printf("%d\n", ft_isalnum('A'));
-//     printf("%d\n", ft_isalnum('9'));
-//     printf("%d\n", ft_isalnum('@'));
+//     char str[] = "HELLO WORLD";
+
+//     printf("Antes: %s\n", str);
+
+//     memset(str, 'A', 5);
+
+//     printf("Depois: %s\n", str);
 
 //     return 0;
 // }

@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calberto <calberto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:03:48 by calberto          #+#    #+#             */
-/*   Updated: 2026/04/20 16:18:21 by calberto         ###   ########.fr       */
+/*   Updated: 2026/05/10 16:03:43 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_strlen (char *s)
+int ft_strlen(char *s)
 {
     int i;
 
     i = 0;
     while (s[i] != '\0')
         i++;
-    return(i);
+    return (i);
 }
 
 /*int main (void)
