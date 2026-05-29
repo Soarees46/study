@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 14:01:29 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/25 19:08:34 by carlossoare      ###   ########.fr       */
+/*   Created: 2026/05/29 19:38:17 by carlossoare       #+#    #+#             */
+/*   Updated: 2026/05/29 19:40:32 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+#include "libft.h"
+#include <stdlib.h>
+
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    // se for uma letra minúscula
-    if (c >= 'a' && c <= 'z')
+    if (lst == NULL || del == NULL)
     {
-        // converte para maiúscula
-        c = c - 32;
+        return;
     }
-    // devolve o resultado (alterado ou não)
-    return (c);
+    del(lst->content);
+    free(lst);
 }
+/* 1. Verificamos se o nó existe e se a função de limpeza foi fornecida */
+/* 2. Usamos a função 'del' para limpar o conteúdo do nó */
+/* 3. Libertamos a memória do nó em si */
