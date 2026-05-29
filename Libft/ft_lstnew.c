@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 19:14:01 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 20:26:32 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 22:03:38 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_list *ft_lstnew(void *content)
 {
-    t_list *newnode;
+	t_list *newnode;
 
-    newnode = malloc(sizeof(t_list));
-    if (!newnode)
-        return (NULL);
-    newnode->content = content;
-    newnode->next = NULL;
-    return (newnode);
+	newnode = malloc(sizeof(t_list));
+	if (!newnode)
+		return (NULL);
+	newnode->content = content;
+	newnode->next = NULL;
+	return (newnode);
 }
 /*
 ** EXPLICAÇÃO:

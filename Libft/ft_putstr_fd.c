@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 18:53:10 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 20:25:16 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 22:08:23 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-    size_t i;
+	size_t i;
 
-    i = 0;
-    while (s[i])
-        write(fd, &s[i++], 1);
+	i = 0;
+	while (s[i])
+		write(fd, &s[i++], 1);
 }
 /*
 ** EXPLICAÇÃO:

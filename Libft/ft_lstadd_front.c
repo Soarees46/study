@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 19:20:36 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 20:26:54 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 22:01:47 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (!lst || !new)
-        return;
-    new->next = *lst;
-    *lst = new;
+	if (!lst || !new)
+		return;
+	new->next = *lst;
+	*lst = new;
 }
 /*
 ** EXPLICAÇÃO:

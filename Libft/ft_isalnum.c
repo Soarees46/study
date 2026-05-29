@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 15:35:24 by calberto          #+#    #+#             */
-/*   Updated: 2026/05/19 17:56:31 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 21:59:42 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int ft_isalnum(int c)
 {
-    if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-        return (1);
-    return (0);
+	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	return (0);
 }
-
 // #include <stdio.h>
 
 // int ft_isalnum(int c);

@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 18:51:34 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 20:29:36 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 22:08:27 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
 /*
 ** EXPLICAÇÃO:

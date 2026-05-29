@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 19:25:32 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 20:30:35 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 22:03:49 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int ft_lstsize(t_list *lst)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (lst != NULL)
-    {
-        i++;
-        lst = lst->next;
-    }
-    return (i);
+	i = 0;
+	while (lst != NULL)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (i);
 }
 /*
 ** EXPLICAÇÃO:

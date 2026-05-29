@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 14:17:43 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 20:40:44 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 21:59:21 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,29 @@
 
 void *ft_calloc(size_t nmemb, size_t size)
 {
-    unsigned char *memory;
-    size_t total_bytes;
-    size_t index;
+	unsigned char *memory;
+	size_t total_bytes;
+	size_t index;
 
-    /* proteção contra overflow */
-    if (nmemb != 0 && size > (size_t)-1 / nmemb)
-        return (NULL);
-    /* calcular total de bytes */
-    total_bytes = nmemb * size;
-    /* reservar memória */
-    memory = malloc(total_bytes);
-    /* verificar se malloc falhou */
-    if (memory == NULL)
-        return (NULL);
-    /* colocar todos os bytes a 0 */
-    index = 0;
-    while (index < total_bytes)
-    {
-        memory[index] = 0;
-        index++;
-    }
-    /* devolver memória */
-    return (memory);
+	/* proteção contra overflow */
+	if (nmemb != 0 && size > (size_t)-1 / nmemb)
+		return (NULL);
+	/* calcular total de bytes */
+	total_bytes = nmemb * size;
+	/* reservar memória */
+	memory = malloc(total_bytes);
+	/* verificar se malloc falhou */
+	if (memory == NULL)
+		return (NULL);
+	/* colocar todos os bytes a 0 */
+	index = 0;
+	while (index < total_bytes)
+	{
+		memory[index] = 0;
+		index++;
+	}
+	/* devolver memória */
+	return (memory);
 }
 /*
 ** EXPLICAÇÃO:

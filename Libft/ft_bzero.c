@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:24:18 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/19 18:11:52 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/29 21:59:22 by carlossoare      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 void ft_bzero(void *s, size_t n)
 {
-    size_t i;
-    unsigned char *ptr;
+	size_t i;
+	unsigned char *ptr;
 
-    ptr = (unsigned char *)s;
-    i = 0;
-    while (i < n)
-    {
-        ptr[i] = 0;
-        i++;
-    }
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 }
 
 // #include <stdio.h>
