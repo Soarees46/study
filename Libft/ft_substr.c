@@ -6,7 +6,7 @@
 /*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 15:41:30 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/30 09:45:46 by calberto         ###   ########.fr       */
+/*   Updated: 2026/05/30 10:39:13 by joesanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	i = 0;
-	while (s[i])
-		i++;
-	if (start >= i)
+	s_len = ft_strlen(s);
+	if (start >= s_len)
 	{
 		sub = malloc(1);
 		if (!sub)
@@ -33,18 +31,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub[0] = '\0';
 		return (sub);
 	}
-	if (len > i - start)
-		len = i - start;
+	if (len > s_len - start)
+		len = s_len - start;
 	sub = malloc(len + 1);
 	if (!sub)
 		return (NULL);
-	s_len = 0;
-	while (s_len < len)
-	{
-		sub[s_len] = s[start + s_len];
-		s_len++;
-	}
-	sub[s_len] = '\0';
+	i = -1;
+	while (++i < len)
+		sub[i] = s[start + i];
+	sub[i] = '\0';
 	return (sub);
 }
 // 1. conta a string

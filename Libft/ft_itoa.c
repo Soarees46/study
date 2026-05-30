@@ -6,16 +6,16 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 17:53:15 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 22:01:00 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:48:25 by joesanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-static int ft_nbrlen(int n)
+static	int ft_nbrlen(int n)
 {
-	int len;
+	int	len;
 
 	len = (n <= 0);
 	while (n)
@@ -26,11 +26,11 @@ static int ft_nbrlen(int n)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	long nb;
-	int len;
+	char	*str;
+	long	nb;
+	int		len;
 
 	len = ft_nbrlen(n);
 	str = (char *)malloc((len + 1) * sizeof(char));

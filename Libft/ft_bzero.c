@@ -6,7 +6,7 @@
 /*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:24:18 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/30 09:33:56 by calberto         ###   ########.fr       */
+/*   Updated: 2026/05/30 10:46:03 by joesanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;

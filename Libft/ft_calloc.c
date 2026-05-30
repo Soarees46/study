@@ -6,7 +6,7 @@
 /*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 14:17:43 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/30 10:07:09 by calberto         ###   ########.fr       */
+/*   Updated: 2026/05/30 10:44:51 by joesanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*memory;
-	size_t	total_bytes;
-	size_t	index;
+	size_t			total_bytes;
+	size_t			index;
 
-	if	(nmemb != 0 && size > (size_t)-1 / nmemb)
+	if (nmemb != 0 && size > (size_t)-1 / nmemb)
 		return (NULL);
 	total_bytes = nmemb * size;
 	memory = malloc(total_bytes);
