@@ -6,7 +6,7 @@
 /*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 19:18:57 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/30 10:09:56 by calberto         ###   ########.fr       */
+/*   Updated: 2026/05/30 10:33:23 by joesanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (NULL);
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-
 	if (d > s)
 	{
 		while (n > 0)
 		{
 			n--;
 			d[n] = s[n];
+		}
 		return (dest);
 	}
 	i = 0;
