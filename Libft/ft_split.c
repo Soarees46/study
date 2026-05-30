@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
+/*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 17:16:03 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 22:09:51 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:08:39 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-static size_t ft_wordconter(char const *s, char c)
+static size_t	ft_wordconter(char const *s, char c)
 {
-	size_t count;
-	int is_word;
+	size_t	count;
+	int		is_word;
 
 	count = 0;
 	is_word = 0;
@@ -34,9 +34,9 @@ static size_t ft_wordconter(char const *s, char c)
 	return (count);
 }
 
-static void *ft_cleaner(char **arr)
+static void	*ft_cleaner(char **arr)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (arr[i])
@@ -48,11 +48,11 @@ static void *ft_cleaner(char **arr)
 	return (NULL);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **res;
-	char *word_start;
-	size_t i;
+	char	**res;
+	char	*word_start;
+	size_t	i;
 
 	if (!s)
 		return (NULL);

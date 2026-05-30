@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
+/*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 14:18:53 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 20:33:29 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:01:01 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char *str;
-    int i;
+	char	*str;
+	int		i;
 
-    i = 0;
-    while (s[i])
-    {
-        i++;
-    }
-    str = malloc(i + 1 * sizeof(char));
-    if (!str)
-        return (NULL);
-    i = 0;
-    while (s[i])
-    {
-        str[i] = s[i];
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
+	i = 0;
+	while (s[i])
+	{
+		i++;
+	}
+	str = malloc(i + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 // #include <stdio.h>
 // int main()
