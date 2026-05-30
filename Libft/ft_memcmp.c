@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
+/*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 14:00:28 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 22:06:13 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:41:17 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-int ft_memcmp(const void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *dest, const void *src, size_t n)
 {
-	unsigned int i;
-	unsigned char *d;
-	unsigned char *s;
+	unsigned int	i;
+	unsigned char	*d;
+	unsigned char	*s;
 
 	i = 0;
 	d = (unsigned char *)dest;

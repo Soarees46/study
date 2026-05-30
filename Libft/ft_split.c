@@ -6,7 +6,7 @@
 /*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 17:16:03 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/30 10:08:39 by calberto         ###   ########.fr       */
+/*   Updated: 2026/05/30 10:48:29 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		if (*s == '\0')
-			break;
+			break ;
 		word_start = (char *)s;
 		while (*s && *s != c)
 			s++;

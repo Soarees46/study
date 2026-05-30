@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
+/*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 19:33:43 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 22:01:34 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:47:59 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last_node;
+	t_list	*last_node;
 
 	if (lst == NULL || new == NULL)
 	{
-		return;
+		return ;
 	}
 	if (*lst == NULL)
 	{

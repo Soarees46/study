@@ -6,7 +6,7 @@
 /*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 16:01:21 by calberto          #+#    #+#             */
-/*   Updated: 2026/05/10 16:03:38 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:25:07 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_isprint(int c)
 {
-	if (c >= 32 && c <= 63)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
