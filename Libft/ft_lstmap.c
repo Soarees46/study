@@ -3,34 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
+/*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 20:48:33 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 22:03:26 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:40:11 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new_list;
-	t_list *new_node;
-	void *temp_content;
+	t_list	*new_list;
+	t_list	*new_node;
+	void	*temp_content;
 
 	new_list = NULL;
 	while (lst != NULL)
 	{
-		temp_content = f(lst->content);		// 1. Transforma o conteúdo
-		new_node = ft_lstnew(temp_content); // 2. Cria o novo nó
+		temp_content = f(lst->content);
+		new_node = ft_lstnew(temp_content);
 		if (!new_node)
 		{
-			del(temp_content);			 // 3. SE falhar, apaga o conteúdo com 'del'
-			ft_lstclear(&new_list, del); // 4. Apaga a lista nova
-			return (NULL);				 // 5. Sai com erro
+			del(temp_content);
+			ft_lstclear(&new_list, del);
+			return (NULL);
 		}
-		ft_lstadd_back(&new_list, new_node); // 6. Junta à lista
-		lst = lst->next;					 // 7. Próximo nó
+		ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
 	}
 	return (new_list);
 }

@@ -3,32 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
+/*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 20:17:35 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 22:02:20 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:47:18 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *current_node;
-	t_list *next_node;
+	t_list	*current_node;
+	t_list	*next_node;
 
 	if (lst == NULL || del == NULL)
 	{
-		return;
+		return ;
 	}
 	current_node = *lst;
 	while (current_node != NULL)
 	{
-		// Guardamos o próximo antes de apagar o atual
 		next_node = current_node->next;
-		// Apagamos o nó atual
 		ft_lstdelone(current_node, del);
-		// Avançamos para o próximo
 		current_node = next_node;
 	}
 	*lst = NULL;

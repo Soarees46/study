@@ -3,28 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlossoares <carlossoares@student.42.f    +#+  +:+       +#+        */
+/*   By: calberto <calberto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 20:21:28 by carlossoare       #+#    #+#             */
-/*   Updated: 2026/05/29 22:02:59 by carlossoare      ###   ########.fr       */
+/*   Updated: 2026/05/30 10:46:01 by calberto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	/* 1. Verificamos se a lista existe e se a função f não é nula */
 	if (lst == NULL || f == NULL)
 	{
-		return;
+		return ;
 	}
-	/* 2. Enquanto o ponteiro lst não chegar ao fim da lista (NULL) */
 	while (lst != NULL)
 	{
-		/* Aplicamos a função f ao conteúdo do nó atual */
 		f(lst->content);
-		/* Avançamos para o próximo nó */
 		lst = lst->next;
 	}
 }
